@@ -6,12 +6,12 @@ body{
 }
 #form{
     width:450px;
-    background-color: darkgray;
+    background-color: gray;
     padding: 0 20px;
     border: 1px solid red;
 }
 h1{
-    color: blue;
+    color: red;
     text-align: center;
 }
 .b-row{
@@ -26,13 +26,13 @@ h1{
     width: 18%;
 }
 #se1, #se2, #kq{
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(219, 213, 213);
     flex: 1;
     border: none;
 }
 select{
     width: 40px;
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(236, 223, 223);
     color: red;
 }
 .b-but{

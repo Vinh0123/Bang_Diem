@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bangDiem.css">
-    <title>Document</title>
+    <title>Bảng Điểm</title>
 </head>
 <body>
-    <form action="" id="form">
+    <form id="form">
         <h1>Bảng điểm của em</h1>
         <div class="b-row">
-            <b class="b" >Semester1:</b>
+            <b class="b" >Semester1</b>
             <input type="text" name="" id="se1">
         </div>
         <div class="b-row">
-            <b class="b" >Semester2:</b>
+            <b class="b" >Semester2</b>
             <input type="text" name="" id="se2">
         </div>
         <div class="b-row"> 
@@ -26,10 +26,10 @@
             </select>
         </div>
         <div class="b-row">
-            <b class="b" >Summarise:</b>
+            <b class="b" >Summarise</b>
             <input type="text" name="" id="kq">
         </div>
-        <h2 id="demo">Hạng học sinh</h2>
+        <h2 id="demo">Hạng sinh viên</h2>
         <div class="b-but">
             <button onclick="myFunction()">OK</button>
             <button onclick="myFunction2()">Cancel</button>
@@ -38,7 +38,7 @@
     <script src="index.js">
     if (k>=9){
         type="Xuất sắc"
-        document.getElementById('demo').style.color = "violet";
+        document.getElementById('demo').style.color = "green";
     } else if(k>=8){
         type="Giỏi"
         document.getElementById('demo').style.color = "red";
