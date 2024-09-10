@@ -3,67 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bangDiem.css">
     <title>Document</title>
-    <style>
-        form {
-            border: 3px solid red;
-            width: 300px;
-            height: 300px;
-            background-color: rgb(190, 177, 177);
-        }
-        form >* {
-            margin-top: 10px;
-        }
-        .l1 {
-            font-size: 30px;
-            margin-left: 50px;
-        }
-        button {
-            margin-left: 60px;
-            margin-top: 65px;
-        }
-        .s {
-            margin-left: 50px;
-        }
-    </style>
 </head>
 <body>
-    <form>
-        <label class="l1">BẢNG ĐIỂM</label><br>
-        <label class="l2">Semester1</label>
-        <input type="number" name="" id="s1"><br>
-        <label class="l3">Semester2</label>
-        <input type="number" name="" id="s2"><br>
-        <label class="l4">Year</label>
-        <select id="y" class="s">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-        </select><br>
-        <label class="l5">Summary</label>
-        <input type="number" name="" id="sum"><br>
-        <p id="dh"></p>
-        <button onclick="okFunction()">OK</button>
-        <button onclick="cancelFunction()">Canel</button>
+    <form action="" id="form">
+        <h1>Bảng điểm của em</h1>
+        <div class="b-row">
+            <b class="b" >Semester1:</b>
+            <input type="text" name="" id="se1">
+        </div>
+        <div class="b-row">
+            <b class="b" >Semester2:</b>
+            <input type="text" name="" id="se2">
+        </div>
+        <div class="b-row"> 
+            <b class="b">Year</b>
+            <select name="" id="select">
+                <option value="1">1  </option>
+                <option value="2">2  </option>
+                <option value="3">3  </option>
+            </select>
+        </div>
+        <div class="b-row">
+            <b class="b" >Summarise:</b>
+            <input type="text" name="" id="kq">
+        </div>
+        <h2 id="demo">Hạng học sinh</h2>
+        <div class="b-but">
+            <button onclick="myFunction()">OK</button>
+            <button onclick="myFunction2()">Cancel</button>
+        </div>
     </form>
-    <script>
-        function okFunction() {
-            var s1 = parseFloat(document.getElementById('s1').value);
-            var s2 = parseFloat(document.getElementById('s2').value);
-            var year = parseInt(document.getElementById('y'));
-            var sum;
-            var xl;
-            if (year==1) {
-                sum = (s1 + s2) /2;
-            } else if (year==2) {
-                sum = (s1 + s2)/3;
-            } else if (year==3){
-                sum = (s1 + s2)/4
-            }
-            if (sum>=9) {
-                xl = "Xuất sắc"
-            }
-        }
+    <script src="index.js">
+    if (k>=9){
+        type="Xuất sắc"
+        document.getElementById('demo').style.color = "violet";
+    } else if(k>=8){
+        type="Giỏi"
+        document.getElementById('demo').style.color = "red";
+    }else if(k>=6.5){
+        type="Khá"
+        document.getElementById('demo').style.color = "blue";
+    }else if (k>=3.5){
+        type="Trung bình"
+        document.getElementById('demo').style.color = "yellow";
+    }else{
+        type="Yếu"
+        document.getElementById('demo').style.color = "gray";
+    }
+    document.getElementById('kq').value =k;
+    document.getElementById('demo').innerHTML =type;
+    function myFunction2 (){
+        document.getElementById('se1').value =" ";
+        document.getElementById('se2').value =" ";
+    }
     </script>
 </body>
 </html>
